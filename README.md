@@ -1,7 +1,7 @@
 <h1 align="center">Simply Solved</h1>
 
 <p align="center">
-  <img src="https://github.com/ntua/saas2024-55/blob/main/frontend/src/logo.png?raw=true" alt="Logo">
+  <img src="https://github.com/ChainsawPerson/Software-as-a-Service_Technologies_24-55/blob/master/frontend/src/logo.png?raw=true" alt="Logo">
 </p>
 
  
