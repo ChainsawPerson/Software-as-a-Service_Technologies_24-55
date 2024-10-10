@@ -1,0 +1,145 @@
+.view-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: linear-gradient(to right, #ccfed8, #9ec5f7);
+    min-height: 100vh; /* Set minimum height to make the page take up the full height */
+    padding: 0;
+    margin: 0;
+    overflow-y: auto; /* Allow the whole page to be scrollable */
+}
+
+.metadata-section {
+    flex: 1;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(to right, #ccfed8, #9ec5f7);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    /* Removed overflow-y property to prevent independent scrolling */
+    overflow: visible; /* Ensure content is fully visible */
+}
+
+.metadata-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.metadata-table th,
+.metadata-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    background-color: #f9f9f9; /* Light background for better readability */
+}
+
+.metadata-table th {
+    background: linear-gradient(to right, #ccfed8, #9ec5f7);
+    font-weight: bold;
+}
+
+.metadata-table td {
+    background: linear-gradient(to right, #ccfed8, #9ec5f7);
+}
+
+/* Add spacing around the table */
+.metadata-section {
+    margin-bottom: 20px;
+}
+
+/* Ensure the rest of the page is scrollable */
+.input-data-section {
+    flex: 1;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 4px;
+    background: transparent;
+}
+
+.dataset-details, .graph-section, .action-buttons {
+    flex: 1;
+    text-align: center;
+    margin: 10px;
+}
+
+.graph-section img {
+    max-width: 100%;
+}
+
+.action-buttons button {
+    background-color: #444444;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.action-buttons button:hover {
+    background-color: #222222;
+}
+
+/* Done button styles */
+.done-button-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.done-button {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.done-button:hover {
+    background-color: #000000;
+}
+.json-display {
+    background: linear-gradient(to right, #ccfed8, #9ec5f7);
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 800px; /* Limit the width of the JSON display */
+    height: auto;
+    max-height: 400px; /* Limit the height and allow scrolling */
+    overflow-x: auto; /* Allow horizontal scrolling for very wide data */
+    overflow-y: auto; /* Allow vertical scrolling for long data */
+    white-space: pre-wrap; /* Preserve whitespace but allow line wrapping */
+    word-wrap: break-word; /* Ensure long words or lines are wrapped */
+    font-family: 'Courier New', Courier, monospace; /* Use a monospaced font */
+}
+.action-buttons {
+    display: flex;
+    justify-content: center; /* Center buttons */
+    gap: 10px; /* Add spacing between buttons */
+}
+
+.save-button {
+    background-color: #444444;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.save-button:hover {
+    background-color: #222222;
+}

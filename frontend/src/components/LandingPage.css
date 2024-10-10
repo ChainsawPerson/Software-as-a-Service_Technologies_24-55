@@ -1,0 +1,117 @@
+/* src/components/LandingPage.css */
+/* LandingPage.css */
+
+/* Reset margins and padding for the body */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure the landing-page class fills the whole viewport */
+/* Change gradient from left to right */
+.landing-page {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, #ccfed8, #9ec5f7);
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden; /* In case of potential scrollbars */
+}
+
+.landing-header {
+    display: flex;
+    flex-direction: column; /* Αλλάζουμε σε column για να εμφανίζονται τα στοιχεία κάθετα */
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to right, #ccfed8, #9ec5f7);
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 10px; /* Προσθέτουμε περιθώριο κάτω από το logo για να δημιουργηθεί χώρος για τα κουμπιά */
+}
+
+/* Στυλ για τα κουμπιά "Administrator" και "User" */
+.user-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px; /* Προσθέτουμε περιθώριο κάτω από τα κουμπιά */
+}
+
+.admin-button, .guest-button {
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #000000;
+    color: white;
+}
+
+.admin-button:hover, .guest-button:hover {
+    background-color: #000000;
+}
+
+.login {
+    align-self: flex-end; /* Ευθυγράμμιση login στη δεξιά πλευρά */
+}
+
+.system-info {
+    align-self: flex-end; /* Ευθυγράμμιση system info στη δεξιά πλευρά */
+}
+
+.landing-main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.photo {
+    width: 80%;
+    height: 300px;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #333;
+}
+
+.landing-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.landing-nav button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.landing-footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(to right, #ccfed8, #9ec5f7)
+}
+.landing-nav button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background: linear-gradient(to right, #ccfed8, #9ec5f7); /* Set background color to black */
+    color: black;
+    border: none;
+    border-radius: 4px; /* Optional: Add rounded corners */
+}
+
+.landing-nav button:hover {
+    background-color: #333333; /* Set a slightly lighter black for hover effect */
+}

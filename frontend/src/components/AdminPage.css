@@ -1,0 +1,93 @@
+/* src/components/AdminPage.css */
+
+.admin-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Change to flex-start to keep header/footer in place */
+    background: linear-gradient(to right, #ccfed8, #9ec5f7);
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow: hidden; /* Prevents overflow from affecting the body */
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to right, #ccfed8, #9ec5f7);
+}
+
+/* Align the system info to the right */
+.system-info {
+    align-self: flex-end;
+    text-align: right; /* Align text to the right */
+    margin-left: auto; /* Push the system info to the right */
+}
+
+.system-info {
+    align-self: flex-end;
+}
+
+/* Back button styles */
+.back-button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.back-button:hover {
+    background-color: #444444;
+}
+
+.admin-main {
+    flex: 1;
+    width: 100%;
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.activity-table {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Style for each activity row */
+.activity-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 4px;
+    background: transparent; /* Remove the background color */
+}
+
+/* Ensure all text and buttons are aligned properly */
+.activity-row span, .activity-row button {
+    flex: 1;
+    text-align: center;
+}
+
+/* Style for the buttons inside the activity rows */
+.activity-row button {
+    background-color: #444444;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.activity-row button:hover {
+    background-color: #444444; /* Darken on hover */
+}

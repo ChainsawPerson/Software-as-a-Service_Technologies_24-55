@@ -1,0 +1,53 @@
+-- Δημιουργία πίνακα χρηστών
+CREATE TABLE users (
+	id SERIAL PRIMARY KEY,
+	username VARCHAR(50) NOT NULL,
+	password VARCHAR(50) NOT NULL
+);
+
+-- Δημιουργία πίνακα πληρωμών
+CREATE TABLE payments (
+	id SERIAL PRIMARY KEY,
+	user_id INTEGER NOT NULL,
+	amount DECIMAL(10, 2) NOT NULL,
+	FOREIGN KEY (user_id) REFERENCES users (id)
+);
+
+-- Δημιουργία πίνακα προβλημάτων χωρίς user_id
+CREATE TABLE problems (
+	id SERIAL PRIMARY KEY,
+	description TEXT NOT NULL,
+	status VARCHAR(50) NOT NULL,
+	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Δημιουργία πίνακα στατιστικών
+CREATE TABLE statistics (
+	id SERIAL PRIMARY KEY,
+	problem_id INTEGER NOT NULL,
+	processing_time DECIMAL(10, 2),
+	FOREIGN KEY (problem_id) REFERENCES problems (id),
+	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+ALTER TABLE payments DROP CONSTRAINT payments_user_id_fkey;
+ALTER TABLE payments DROP COLUMN user_id;
+
+ALTER TABLE problems
+ADD COLUMN results TEXT;
+
+ALTER TABLE problems
+ADD COLUMN "user" TEXT,
+ADD COLUMN solved_at TIMESTAMP WITHOUT TIME ZONE,
+ADD COLUMN input_data TEXT;
+
+ALTER TABLE payments ADD COLUMN expires_at TIMESTAMP WITHOUT TIME ZONE;
+ALTER TABLE payments ADD COLUMN purchased_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
+ALTER TABLE statistics
+ADD COLUMN cpu_usage text,
+ADD COLUMN memory_usage text;
+
+ALTER TABLE statistics
+ADD CONSTRAINT fk_problem
+FOREIGN KEY (problem_id) REFERENCES problems(id);
+

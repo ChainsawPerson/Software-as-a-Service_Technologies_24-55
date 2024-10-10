@@ -1,0 +1,78 @@
+.buy-credits-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ccfed8, #9ec5f7);
+}
+
+.buy-credits-page header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #ccfed8, #9ec5f7);
+    z-index: 1000;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.buy-credits-page h1 {
+    margin-top: 80px;
+}
+
+.buy-credits-page form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+input[type="number"] {
+    padding: 8px;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #000000;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.balance-info, .credits-info, .new-balance-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.balance-box, .credits-box, .new-balance-box {
+    padding: 8px;
+    width: 100px;
+    text-align: center;
+    border: 1px solid #000;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* Adjust the margin for the new balance field to move it lower */
+.new-balance-info {
+    margin-top: 40px; /* Increase this value to move it further down */
+}

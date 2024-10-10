@@ -1,0 +1,17 @@
+{
+  "name": "problem-service",
+  "version": "1.0.0",
+  "description": "Problem Service for solveMyProblem project",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.17.1",
+    "pg": "^8.12.0"
+  }
+}

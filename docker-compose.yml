@@ -1,0 +1,78 @@
+version: '3.8'
+
+services:
+  user-service:
+    build:
+      context: ./user-service
+    ports:
+      - "3001:3001"
+    networks:
+      - solveMyProblemNetwork
+
+  payment-service:
+    build:
+      context: ./payment-service
+    ports:
+      - "3002:3002" # Ensure this is the port your service is running on
+    networks:
+      - solveMyProblemNetwork
+
+  problem-service:
+    build:
+      context: ./problem-service
+    ports:
+      - "3003:3003"
+    networks:
+      - solveMyProblemNetwork
+
+  solver-service:
+    build:
+      context: ./solver-service
+    ports:
+      - "5000:5000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock  # Mount Docker socket to allow SDK access
+    networks:
+      - solveMyProblemNetwork
+
+  statistics-service:
+    build:
+      context: ./statistics-service
+    ports:
+      - "3004:3004"
+    networks:
+      - solveMyProblemNetwork
+
+  api-gateway:
+    build:
+      context: ./api-gateway
+    ports:
+      - "3000:3000"
+    networks:
+      - solveMyProblemNetwork
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3006:80"
+    networks:
+      - solveMyProblemNetwork
+
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "3007:3007"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_HOST: host.docker.internal
+      POSTGRES_DB: mydatabase
+      POSTGRES_PASSWORD: 123
+      POSTGRES_PORT: 5432
+    networks:
+      - solveMyProblemNetwork
+
+networks:
+  solveMyProblemNetwork:
+    driver: bridge

@@ -1,0 +1,35 @@
+Main steps in solving the problem
+For each language, the basic steps for setting up and solving a problem are the same:
+
+Import the required libraries,
+Declare the solver,
+Create the variables,
+Define the constraints,
+Define the objective function,
+Invoke the solver and
+Display the results.
+
+Types of problems:
+Linear optimization
+Constraint optimization
+Mixed-integer optimization
+Assignment
+Scheduling
+Packing
+Routing
+Network flows
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Python Related
+
+# Open JSON from file
+with open('data.json', 'r') as file:
+    data = json.load(file)
+
+# JSON to string
+stringDes = json.dumps(data)
+
+print(stringDes)
+
+# String to JSON
+description = json.loads(stringDes)

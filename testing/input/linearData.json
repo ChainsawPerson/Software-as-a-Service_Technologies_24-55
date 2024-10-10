@@ -1,0 +1,33 @@
+{
+    "model" : "LinearSolver",
+    "description" : {
+      "xlb": 0,
+      "xub": "infinity",
+      "ylb": 0,
+      "yub": "infinity",
+      "constraints": {
+        "C0": {
+          "x": 1,
+          "y": 2,
+          "ineq": "lessorequal",
+          "val": 14
+        },
+        "C1": {
+          "x": 3,
+          "y": -1,
+          "ineq": "greaterorequal",
+          "val": 0
+        },
+        "C2": {
+          "x": 1,
+          "y": -1,
+          "ineq": "lessorequal",
+          "val": 2
+        }
+      },
+      "objective": {
+        "minmax": "max",
+        "x": 3,
+        "y": 4
+      }
+}}
